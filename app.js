@@ -12,6 +12,10 @@ const shopDomain = process.env.SHOP_DOMAIN;
 
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("hello from server");
+});
+
 // Endpoint to fetch product data
 app.get("/api/product/:id", async (req, res) => {
   const productId = req.params.id;
